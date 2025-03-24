@@ -55,4 +55,8 @@ This tool classifies patients as either healthy (PMRI) or having impaired blood 
 ## Limitations
 - The model was trained on a small dataset (15 healthy patients, 9 diseased patients)
 - Performance may vary when applied to patients with different demographic characteristics
+<<<<<<< HEAD
 - The tool should be used as a decision support system and not as a replacement for clinical judgment
+=======
+- The tool should be used as a decision support system and not as a replacement for clinical judgment
+>>>>>>> 706668ff3a6219b6b47d52d95979d774e462a8ee
