@@ -79,8 +79,9 @@ if st.button("Predict"):
         # Display results
         st.subheader("Prediction Results")
         
-        # Use a success/error box based on prediction
-        if prediction == 1:  # Healthy
+        # CORRECTED: Use a success/error box based on prediction
+        # disease_status 0 = Healthy (PMRI), 1 = Diseased (PAD)
+        if prediction == 0:  # Healthy
             st.success(f"Prediction: Healthy (PMRI)")
         else:  # Diseased
             st.error(f"Prediction: Impaired Blood Microcirculation (PAD)")
@@ -90,9 +91,9 @@ if st.button("Predict"):
         st.write(f"Confidence: {confidence:.2f}%")
         st.progress(int(confidence))
         
-        # Show detailed probabilities
-        st.write(f"Probability - Healthy: {probabilities[1]*100:.2f}%")
-        st.write(f"Probability - Diseased: {probabilities[0]*100:.2f}%")
+        # CORRECTED: Show detailed probabilities
+        st.write(f"Probability - Healthy: {probabilities[0]*100:.2f}%")
+        st.write(f"Probability - Diseased: {probabilities[1]*100:.2f}%")
         
         # Display feature values (optional, for transparency)
         with st.expander("See derived features used for prediction"):

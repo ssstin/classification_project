@@ -173,3 +173,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Other stuff:
+Excel/
+image/
+.DS_Store
